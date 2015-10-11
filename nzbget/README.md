@@ -14,7 +14,8 @@ A Docker file to create a vanilla installation of NZBGet inside a container.
 `docker build -t rsmitty/nzbget .`
 
 - Run it with:
-`docker run -p 6789:6789 --detach=true rsmitty/nzbget`
+`docker run -d -p 6789:6789 -v /Users/spencer/Movies/.nzbconfigs/nzbget-backup.conf:/app/nzbget.conf -v /Users/spencer/Movies:/app/downloads/completed nzbget`
+Note the mapping of a backed up config file to overwrite a nzbget.conf
 
 - Hit it in your browser by going to $IPADDRESS:6789
 
