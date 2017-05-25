@@ -1,3 +1,12 @@
+## HipChat
+##
+## docker run -d\
+## -v /p/.X11-unix:/tmp/.X11-unix \
+## -e DISPLAY=$DISPLAY \
+## -v /$path_to_config_dir/Atlassian:/root/.config/Atlassian \
+## --device /dev/snd 
+## rsmitty/hipchat
+
 FROM ubuntu:16.04
 
 RUN apt-get update && \
