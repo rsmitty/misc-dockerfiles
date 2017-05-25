@@ -5,6 +5,7 @@
 ## -e DISPLAY=$DISPLAY \
 ## -v /$path_to_config_dir/Atlassian:/root/.config/Atlassian \
 ## --device /dev/snd 
+## --device /dev/dri
 ## rsmitty/hipchat
 
 FROM ubuntu:16.04
@@ -17,4 +18,4 @@ RUN apt-get update && \
     apt-get install -y hipchat4 && \
     rm -rf /var/lib/apt/lists/*
 
-CMD hipchat4
+CMD hipchat4 --disable-gpu
